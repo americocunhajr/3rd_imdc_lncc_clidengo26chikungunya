@@ -1,17 +1,17 @@
-## Model 3: LNCC-CLiDENGO-2026-1
+## LNCC-CLiDENGO26-Chikungunya
 
 <div style="display: flex; align-items: center; flex-wrap: wrap;">
   <div style="flex: 0 0 auto; margin-right: 20px;">
     <img src="../logo/logo-CLiDENGO.png" alt="LNCC-CLiDENGO" width="20%">
   </div>
   <div style="flex: 1 1 auto; min-width: 250px;">
-    <strong>CLiDENGO — CLimate Logistic DENGue Outbreak Simulator</strong> is a forecasting model for DENV dynamics through a mechanistic, stochastic climate-modulated β-logistic growth model for weekly dengue cases at the state (UF) level. It couples a flexible epidemic growth core with a climate response so that periods of favorable weather (e.g., warm, humid, rainy) accelerate epidemic growth in a data-driven way.
+    <strong>CLiDENGO</strong> is a forecasting model for Chikungunya dynamics through a mechanistic, stochastic climate-modulated β-logistic growth model for weekly chikungunya cases at the state (UF) level. It couples a flexible epidemic growth core with a climate response so that periods of favorable weather (e.g., warm, humid, rainy) accelerate epidemic growth in a data-driven way.
   </div>
 </div>
 
 #### Repository structure:
 ```
-IMDC2026_Model3_LNCC-CLiDENGO-2026-1/
+3rd_imdc_lncc_clidengo26chikungunya/
 │
 |── DengueSprint2025_DataAggregated: surveillance and climate data aggregated at the state level
 │
@@ -29,10 +29,10 @@ IMDC2026_Model3_LNCC-CLiDENGO-2026-1/
 * Prof. Christian Soize (Université Gustave Eiffel, France)
 
 #### Data and Variables: 
-We use surveillance (weekly probable cases) together with climate covariates - temperature (min/mean/max), precipitation (min/mean/max), and relative humidity (min/mean/max) - aggregated at the UF level. Data are arranged as seasons of 52 weeks, from EW 41 of year Y to EW 40 of Y+1. Climate series are min–max normalized on the training set and lightly denoised to form a baseline seasonal signal; case series are also denoised for QoI preparation while keeping values non-negative and integer when reported. Training uses multiple past seasons (e.g., 2010–2011 to 2020–2021); the next season (e.g., 2022–2023) is held out for validation. These inputs come from the 'DengueSprint2025_DataAggregated' repository.
+We use surveillance (weekly probable cases) together with climate covariates - temperature (min/mean/max), precipitation (min/mean/max), and relative humidity (min/mean/max) - aggregated at the UF level. Data are arranged as seasons of 52 weeks, from EW 41 of year Y to EW 40 of Y+1. Climate series are min–max normalized on the training set and lightly denoised to form a baseline seasonal signal; case series are also denoised for QoI preparation while keeping values non-negative and integer when reported. Training uses multiple past seasons (e.g., 2010–2011 to 2020–2021); the next season (e.g., 2022–2023) is held out for validation. These inputs come from the 'Data' repository.
 
 #### Model Structure: 
-CLiDENGO forecasts weekly dengue incidence by integrating a β-logistic growth ODE whose effective growth rate can be modulated by climate (temperature, precipitation, relative humidity). The model is trained per state (UF) and produces median and 50/80/90/95% prediction intervals.
+CLiDENGO forecasts weekly chikungunya incidence by integrating a β-logistic growth ODE whose effective growth rate can be modulated by climate (temperature, precipitation, relative humidity). The model is trained per state (UF) and produces median and 50/80/90/95% prediction intervals.
 
 - State variable: The model tracks the cumulative number of probable cases per week, denoted here as C(t). The incidence (new cases per week) is computed as the model’s rate of change, reported as dC(t).
 - Growth law: The epidemic growth belongs to the beta-logistic family. In words:
