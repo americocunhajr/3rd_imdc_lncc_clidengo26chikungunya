@@ -13,12 +13,12 @@
 ```
 3rd_imdc_lncc_clidengo26chikungunya/
 │
-|── DengueSprint2025_DataAggregated: surveillance and climate data aggregated at the state level
+|── Data: surveillance and climate data aggregated at the state level
 │
-|── Dengue_Validation1: model output files for validation challenge 1
-|── Dengue_Validation2: model output files for validation challenge 2
-|── Dengue_Validation3: model output files for validation challenge 3
-|── Dengue_Validation4: model output files for validation challenge 4
+|── Chikungunya_Validation1_2022–2023-Season: model output files for validation challenge 1
+|── Chikungunya_Validation2_2023–2024-Season: model output files for validation challenge 2
+|── Chikungunya_Validation3_2024–2025-Season: model output files for validation challenge 3
+|── Chikungunya_Validation4_2025–2026-Season: model output files for validation challenge 4
 │
 |── logo: D-FENSE team logo files
 ```
