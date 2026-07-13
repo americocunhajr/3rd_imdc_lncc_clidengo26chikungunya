@@ -120,7 +120,7 @@ Nufs = length(FederativeUnitsNames);
 
 % Loop over each federation unit to make predictions
 % -----------------------------------------------------------
-for j = 8:Nufs
+for j = 1:Nufs
 
     % Extract the current state 'uf'
     current_uf = FederativeUnitsNames{j};
@@ -440,15 +440,15 @@ for j = 8:Nufs
     % ================
 
     % Prepare data for output table (ensure they are column vectors)
-    lower95 = round(dC_valid_low(1,:))';
-    lower90 = round(dC_valid_low(2,:))';
-    lower80 = round(dC_valid_low(3,:))';
-    lower50 = round(dC_valid_low(4,:))';
-    pred    = round(dC_valid_median);
-    upper50 = round(dC_valid_upp(4,:))';
-    upper80 = round(dC_valid_upp(3,:))';
-    upper90 = round(dC_valid_upp(2,:))';
-    upper95 = round(dC_valid_upp(1,:))';
+    lower95 = max(round(dC_valid_low(1,:))',1);
+    lower90 = max(round(dC_valid_low(2,:))',1);
+    lower80 = max(round(dC_valid_low(3,:))',1);
+    lower50 = max(round(dC_valid_low(4,:))',1);
+    pred    = max(round(dC_valid_median),1);
+    upper50 = max(round(dC_valid_upp(4,:))',1);
+    upper80 = max(round(dC_valid_upp(3,:))',1);
+    upper90 = max(round(dC_valid_upp(2,:))',1);
+    upper95 = max(round(dC_valid_upp(1,:))',1);
     
     % Data field for output table
     DataFields = {'date'     ,...
