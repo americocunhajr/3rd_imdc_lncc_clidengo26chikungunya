@@ -120,7 +120,7 @@ Nufs = length(FederativeUnitsNames);
 
 % Loop over each federation unit to make predictions
 % -----------------------------------------------------------
-for j = 1:1
+for j = 1:Nufs
 
     % Extract the current state 'uf'
     current_uf = FederativeUnitsNames{j};
