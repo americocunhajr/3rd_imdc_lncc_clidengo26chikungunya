@@ -45,7 +45,7 @@ disp(' ');
 
 % random number generator (fix the seed for reproducibility)
 rng_stream = RandStream('mt19937ar','Seed',30081984);
-RandStream.setGlobalStream(rng_stream);
+%RandStream.setGlobalStream(rng_stream);
 
 % number of Monte Carlo realizations
 nReal = 128;
@@ -120,7 +120,7 @@ Nufs = length(FederativeUnitsNames);
 
 % Loop over each federation unit to make predictions
 % -----------------------------------------------------------
-for j = 1:Nufs
+for j = 22
 
     % Extract the current state 'uf'
     current_uf = FederativeUnitsNames{j};
